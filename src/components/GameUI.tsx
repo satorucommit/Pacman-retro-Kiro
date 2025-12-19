@@ -1,5 +1,5 @@
 import React from 'react';
-import { GameState, Direction } from '../types/game.ts';
+import { GameState, Direction } from '../types/game';
 
 interface GameUIProps {
   gameState: GameState;

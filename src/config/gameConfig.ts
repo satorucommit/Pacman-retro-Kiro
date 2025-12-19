@@ -1,4 +1,4 @@
-import { GameConfig, CellType } from '../types/game.ts';
+import { GameConfig, CellType } from '../types/game';
 
 export const GAME_CONFIG: GameConfig = {
   MAZE_WIDTH: 19,

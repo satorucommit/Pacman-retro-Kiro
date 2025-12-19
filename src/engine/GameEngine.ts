@@ -7,14 +7,14 @@ import {
   CellType,
   GhostState,
   GhostType
-} from '../types/game.ts';
+} from '../types/game';
 import {
   GAME_CONFIG,
   MAZE_LAYOUT,
   GHOST_CONFIG,
   PACMAN_START_POSITION
-} from '../config/gameConfig.ts';
-import { AIEngine } from './AIEngine.ts';
+} from '../config/gameConfig';
+import { AIEngine } from './AIEngine';
 
 /**
  * Core game engine handling all game logic, physics, and state management
@@ -285,6 +285,9 @@ export class GameEngine {
         ghost.direction = Direction.DOWN;
       }
       this.setGhostVelocity(ghost);
+      
+      // Move ghost in house
+      ghost.position.y += ghost.velocity.dy;
       return;
     }
 

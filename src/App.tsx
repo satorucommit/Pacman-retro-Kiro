@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { GameEngine } from './engine/GameEngine.ts';
-import { GameRenderer } from './components/GameRenderer.tsx';
-import { GameUI } from './components/GameUI.tsx';
-import { Dashboard, Difficulty } from './components/Dashboard.tsx';
-import { Direction } from './types/game.ts';
+import { GameEngine } from './engine/GameEngine';
+import { GameRenderer } from './components/GameRenderer';
+import { GameUI } from './components/GameUI';
+import { Dashboard, Difficulty } from './components/Dashboard';
+import { Direction } from './types/game';
 import './App.css';
 
 /**

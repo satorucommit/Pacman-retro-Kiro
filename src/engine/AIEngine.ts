@@ -7,8 +7,8 @@ import {
   GhostState,
   AIAnalysis,
   GhostType 
-} from '../types/game.ts';
-import { GAME_CONFIG, AI_CONFIG } from '../config/gameConfig.ts';
+} from '../types/game';
+import { GAME_CONFIG, AI_CONFIG } from '../config/gameConfig';
 
 /**
  * AI Engine for Pac-Man game
@@ -133,7 +133,7 @@ export class AIEngine {
     this.playerPatterns.push(direction);
 
     // Keep only recent patterns
-    if (this.playerPatterns.length > AI_CONFIG.PATTERN_THRESHOLD) {
+    if (this.playerPatterns.length > GAME_CONFIG.AI_PATTERN_MEMORY) {
       this.playerPatterns.shift();
     }
 

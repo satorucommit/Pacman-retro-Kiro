@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { GameState, CellType, Direction, GhostState } from '../types/game.ts';
-import { GAME_CONFIG } from '../config/gameConfig.ts';
+import { GameState, CellType, Direction, GhostState } from '../types/game';
+import { GAME_CONFIG } from '../config/gameConfig';
 
 interface GameRendererProps {
   gameState: GameState;
