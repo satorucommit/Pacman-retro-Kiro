@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test AI Pac-Man Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .instructions {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #333;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .control-item {
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .key {
+            background: #666;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎮 AI-Powered Pac-Man Game</h1>
+    
+    <div class="instructions">
+        <h2>Game Controls & Features</h2>
+        <div class="controls">
+            <div class="control-item">
+                <strong>Movement:</strong><br>
+                <span class="key">↑↓←→</span> or <span class="key">WASD</span>
+            </div>
+            <div class="control-item">
+                <strong>Start/Pause:</strong><br>
+                <span class="key">SPACE</span>
+            </div>
+            <div class="control-item">
+                <strong>Restart:</strong><br>
+                <span class="key">R</span> (when game over)
+            </div>
+            <div class="control-item">
+                <strong>Toggle AI:</strong><br>
+                <span class="key">H</span>
+            </div>
+        </div>
+        
+        <h3>🤖 AI Features</h3>
+        <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+            <li><strong>Predictive Paths:</strong> See where ghosts are likely to move</li>
+            <li><strong>Danger Zones:</strong> Red overlay shows dangerous areas</li>
+            <li><strong>Adaptive AI:</strong> Ghosts learn your movement patterns</li>
+            <li><strong>Learning Level:</strong> Shows how much AI has learned</li>
+        </ul>
+        
+        <h3>🎯 How to Play</h3>
+        <ol style="text-align: left; max-width: 500px; margin: 0 auto;">
+            <li>Press <span class="key">SPACE</span> to start the game</li>
+            <li>Use arrow keys or WASD to move Pac-Man</li>
+            <li>Collect all pellets while avoiding ghosts</li>
+            <li>Eat power pellets to make ghosts vulnerable</li>
+            <li>Press <span class="key">H</span> to toggle AI assistance</li>
+        </ol>
+    </div>
+    
+    <div style="margin: 20px 0;">
+        <p><strong>Status:</strong> ✅ Game is ready to play!</p>
+        <p>Run <code>npm start</code> to launch the game</p>
+    </div>
+    
+    <div style="background: #222; padding: 15px; border-radius: 10px; margin-top: 20px;">
+        <h3>🔧 Technical Features</h3>
+        <ul style="text-align: left; max-width: 500px; margin: 0 auto; list-style: none; padding: 0;">
+            <li>✅ Pixel-perfect movement system</li>
+            <li>✅ Classic Pac-Man physics and collision detection</li>
+            <li>✅ AI-powered ghost behavior with learning</li>
+            <li>✅ Retro CRT monitor visual effects</li>
+            <li>✅ 60fps smooth gameplay</li>
+            <li>✅ Responsive controls (Arrow keys + WASD)</li>
+            <li>✅ Game state management (Start/Pause/Restart)</li>
+            <li>✅ Score tracking and high score persistence</li>
+        </ul>
+    </div>
+</body>
+</html>

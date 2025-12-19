@@ -1,0 +1,319 @@
+/* App Container */
+.app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Fullscreen Game Container */
+.game-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #0a0a1a 50%, #000000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.game-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Enhanced Game Title */
+.game-title {
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.game-title h1 {
+    margin: 0 0 5px 0;
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+.game-title .subtitle {
+    margin: 0;
+    font-size: clamp(10px, 1.5vw, 16px);
+}
+
+/* Game Area Enhancements */
+.game-area {
+    position: relative;
+    margin: 15px 0;
+    border: 4px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow:
+        0 0 30px rgba(0, 255, 255, 0.3),
+        inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Controls Info */
+.controls-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: clamp(8px, 1vw, 14px);
+}
+
+/* AI Description */
+.ai-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(0, 255, 0, 0.1);
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.ai-feature-desc {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(8px, 1vw, 14px);
+}
+
+/* FPS Counter */
+.fps-counter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    opacity: 0.5;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+/* Ambient Effects */
+.ambient-effects {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.1);
+    animation: scan 4s linear infinite;
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.crt-flicker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.01);
+    animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0.97;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.97;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .crt-monitor {
+        border-width: 15px;
+    }
+
+    .arcade-cabinet {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .crt-monitor {
+        border-width: 10px;
+        border-radius: 10px;
+    }
+
+    .arcade-cabinet {
+        padding: 10px;
+        border-width: 4px;
+    }
+
+    .controls-info {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .control-group {
+        gap: 5px;
+    }
+
+    .ai-description {
+        gap: 5px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-fullscreen {
+        padding: 5px;
+    }
+
+    .game-title {
+        margin-bottom: 8px;
+        padding: 5px;
+    }
+
+    .controls-info {
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .fps-counter {
+        top: 5px;
+        right: 5px;
+        font-size: 8px;
+    }
+}
+
+/* Enhanced animations for game elements */
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 20px rgba(0, 255, 255, 0.3),
+            inset 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    50% {
+        box-shadow:
+            0 0 40px rgba(0, 255, 255, 0.6),
+            inset 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.game-area:hover {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Ensure proper stacking */
+.game-container {
+    position: relative;
+}
+
+/* Ensure proper stacking */
+.game-container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Game canvas sizing */
+.game-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+/* Back to Menu Button */
+.back-to-menu-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.back-to-menu-btn {
+    padding: 12px 24px;
+    background: rgba(255, 0, 255, 0.2);
+    border: 2px solid rgba(255, 0, 255, 0.5);
+    border-radius: 10px;
+    color: #ff00ff;
+    font-family: 'Press Start 2P', monospace;
+    font-size: clamp(8px, 1vw, 12px);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.3);
+}
+
+.back-to-menu-btn:hover {
+    background: rgba(255, 0, 255, 0.4);
+    border-color: #ff00ff;
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 25px rgba(255, 0, 255, 0.6),
+        0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-menu-btn:active {
+    transform: translateY(0);
+}
+
+.btn-icon-back {
+    font-size: 1.2em;
+    animation: slide-left 1.5s ease-in-out infinite;
+}
+
+@keyframes slide-left {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-3px);
+    }
+}
